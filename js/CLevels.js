@@ -1,5 +1,6 @@
 var CLevels = (function(){
-	var _iUpMargin = CARD_HEIGHT/2 + CANVAS_HEIGHT*0.2;
+	//var _iUpMargin = CARD_HEIGHT/2 + CANVAS_HEIGHT*0.2;
+	var _iUpMargin =CANVAS_HEIGHT*0.22;
 	var _iEffectiveCentreX = CANVAS_WIDTH/2;
 	var _iEffectiveCentreY = (CANVAS_HEIGHT - _iUpMargin)/2 + _iUpMargin;
 	var _iEffectiveCanvasHeight = CANVAS_HEIGHT - _iUpMargin;
@@ -26,7 +27,7 @@ var CLevels = (function(){
 
 				var _iCardsPerRow = _iCardsNum/rows;
 
-				if (_iCardsPerRow*(CARD_WIDTH*scaling + _iCardPadding*scaling) <= CANVAS_WIDTH &&
+				if (_iCardsPerRow*(CARD_WIDTH*scaling + _iCardPadding*scaling) <= (CANVAS_WIDTH-200) &&
 					(rows)*(CARD_HEIGHT*scaling+_iCardPadding*scaling) <= _iEffectiveCanvasHeight &&
 					_iCardsNum%rows === 0) {
 
