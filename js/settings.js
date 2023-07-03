@@ -5,7 +5,11 @@ var EDGEBOARD_X = 220;
 var EDGEBOARD_Y = 220;
 
 var DISABLE_SOUND_MOBILE = false;
-var FONT_GAME = "walibi0615bold";
+var FONT_GAME = "RotisSansSerifPro-ExtraBold";
+
+var COLOR_FONT_1="#2C9881";
+
+var COLOR_SHADOWN_1="#fff";
 
 var STATE_LOADING = 0;
 var STATE_MENU    = 1;

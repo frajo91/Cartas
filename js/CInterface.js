@@ -21,33 +21,33 @@ function CInterface(szTimeLeft){
         _szTimeLeft = TEXT_TIMELEFT + szTimeLeft;
         _oTimeLeft = new CTLText(s_oStage, 
                     _pStartPosTimeText.x-250, _pStartPosTimeText.y, 500, 36, 
-                    36, "left", "#fff", FONT_GAME, 1,
+                    36, "left", COLOR_FONT_1, FONT_GAME, 1,
                     0, 0,
                    _szTimeLeft,
                     true, true, false,
                     false );
                     
-        _oTimeLeft.setShadow("#000000", 2, 2, 2);
+        _oTimeLeft.setShadow(COLOR_SHADOWN_1, 2, 2, 2);
 
 
 	_pStartPosScoreText = {x:CANVAS_WIDTH/2,y:75};
   
         _oScore = new CTLText(s_oStage, 
                     _pStartPosScoreText.x-250, _pStartPosScoreText.y, 500, 36, 
-                    36, "center", "#fff", FONT_GAME, 1,
+                    36, "center", COLOR_FONT_1, FONT_GAME, 1,
                     0, 0,
                    TEXT_SCORE + "0",
                     true, true, false,
                     false ); 
         
-        _oScore.setShadow("#000000", 2, 2, 2);
+        _oScore.setShadow(COLOR_SHADOWN_1, 2, 2, 2);
 
-        _oScoreMultText = new createjs.Text("X2", "150px "+FONT_GAME, "#fff");
+        _oScoreMultText = new createjs.Text("X2", "150px "+FONT_GAME, COLOR_FONT_1);
         _oScoreMultText.textAlign = "center";
         _oScoreMultText.textBaseline = "alphabetic";
         _oScoreMultText.x = CANVAS_WIDTH/2;
         _oScoreMultText.y = CANVAS_HEIGHT/2;
-        _oScoreMultText.shadow = new createjs.Shadow("#000000", 2, 2, 2);
+        _oScoreMultText.shadow = new createjs.Shadow(COLOR_SHADOWN_1, 2, 2, 2);
         _oScoreMultText.scaleX = _oScoreMultText.scaleY = 0.1;
         _oScoreMultText.visible = false;
         s_oStage.addChild(_oScoreMultText);

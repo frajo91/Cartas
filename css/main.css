@@ -75,3 +75,18 @@ canvas {
     font-style: normal;
 
 }
+
+@font-face {
+    font-family: 'RotisSansSerifPro-ExtraBold';
+    src: url('RotisSansSerifPro-ExtraBold.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'RotisSansSerifPro';
+    src: url('RotisSansSerifPro.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+
+}
