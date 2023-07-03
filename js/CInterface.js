@@ -30,7 +30,7 @@ function CInterface(szTimeLeft){
         _oTimeLeft.setShadow(COLOR_SHADOWN_1, 2, 2, 2);
 
 
-	_pStartPosScoreText = {x:(CANVAS_WIDTH/6)*4,y:75};
+	_pStartPosScoreText = {x:(CANVAS_WIDTH/6)*4,y:80};
   
         _oScore = new CTLText(s_oStage, 
                     _pStartPosScoreText.x-250, _pStartPosScoreText.y, 500, 36, 

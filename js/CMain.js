@@ -120,7 +120,8 @@ function CMain(oData){
         s_oSpriteLibrary.addSprite("msg_box","./sprites/msg_box.png");
         s_oSpriteLibrary.addSprite("but_fullscreen","./sprites/but_fullscreen.png");
         s_oSpriteLibrary.addSprite("but_credits","./sprites/but_credits.png");
-        s_oSpriteLibrary.addSprite("logo_ctl","./sprites/logo_ctl.png");
+        s_oSpriteLibrary.addSprite("logo_ctl","./sprites/braun_two.png");
+        s_oSpriteLibrary.addSprite("focus","./sprites/FOCUS.png");
         
         RESOURCE_TO_LOAD += s_oSpriteLibrary.getNumSprites();
 

@@ -30,7 +30,7 @@ function CCredits(){
         oTitle.lineWidth = 300;
         _oPanelContainer.addChild(oTitle);
 
-        var oLink = new createjs.Text("www.codethislab.com"," 34px "+FONT_GAME, "#ffffff");
+        var oLink = new createjs.Text("SHARING EXPERTISE"," 34px "+FONT_GAME_1, "#ffffff");
         oLink.y = 70;
         oLink.textAlign = "center";
         oLink.textBaseline = "middle";
@@ -62,7 +62,7 @@ function CCredits(){
     };
     
     this._onLogoButRelease = function(){
-        window.open("http://www.codethislab.com/index.php?&l=en");
+       // window.open("http://www.codethislab.com/index.php?&l=en");
     };
 
     

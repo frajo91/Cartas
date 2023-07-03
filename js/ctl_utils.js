@@ -191,7 +191,7 @@ function sizeHandler() {
         var fOffsetX = ((w / 2) - (destW / 2));
         var fGameInverseScaling = (CANVAS_WIDTH/destW);
 
-        if( fOffsetX*fGameInverseScaling < -EDGEBOARD_X ||  
+        /*if( fOffsetX*fGameInverseScaling < -EDGEBOARD_X ||  
             fOffsetY*fGameInverseScaling < -EDGEBOARD_Y ){
             multiplier = Math.min( h / (CANVAS_HEIGHT-(EDGEBOARD_Y*2)), w / (CANVAS_WIDTH-(EDGEBOARD_X*2)));
             destW = CANVAS_WIDTH * multiplier;
@@ -200,7 +200,7 @@ function sizeHandler() {
             fOffsetX = ( w - destW ) / 2;
             
             fGameInverseScaling = (CANVAS_WIDTH/destW);
-        }
+        }*/
 
         s_iOffsetX = (-1*fOffsetX * fGameInverseScaling);
         s_iOffsetY = (-1*fOffsetY * fGameInverseScaling);
@@ -249,7 +249,7 @@ function sizeHandler() {
         
         $("#canvas").css("left",fOffsetX+"px");
         
-        fullscreenHandler();
+        //fullscreenHandler();
 };
 
 function _checkOrientation(iWidth,iHeight){
