@@ -44,7 +44,7 @@ function CCredits(){
         _oPanelContainer.addChild(_oLogo);
       
         var oSprite = s_oSpriteLibrary.getSprite('but_exit');
-        _oButExit = new CGfxButton(240, -120, oSprite, _oPanelContainer);
+        _oButExit = new CGfxButton(440, -228, oSprite, _oPanelContainer);
         _oButExit.addEventListener(ON_MOUSE_UP, this.unload, this);
         
     };
