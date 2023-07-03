@@ -38,7 +38,7 @@ function CGameOver(){
 		//_oMsgTextScore.setShadow("#000000",2,2,2);
 		
 		
-		_oContinueButton =  new CTextButton(CANVAS_WIDTH/2,670,
+		_oContinueButton =  new CTextButton(CANVAS_WIDTH/2,(CANVAS_HEIGHT/2)+230,
                                             s_oSpriteLibrary.getSprite('but_menu_bg'),
                                             TEXT_PLAY_AGAIN,
                                             FONT_GAME_1,
