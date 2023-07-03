@@ -21,11 +21,12 @@ function CMenu(){
         s_oStage.addChild(_oBg);
 	
 	_pStartPosPlay = {x:((CANVAS_WIDTH/5)*4),y:CANVAS_HEIGHT - 200};
+    _pStartPosPlay2 = {x:((CANVAS_WIDTH/5)*4)-70,y:CANVAS_HEIGHT - 200};
         var oSprite = s_oSpriteLibrary.getSprite('but_menu_bg');
         var oSprite1 = s_oSpriteLibrary.getSprite('but_inicio');
 
-        _oButPlay2 = new CTextButton(_pStartPosPlay.x-oSprite1.width,_pStartPosPlay.y,oSprite1,"play1",FONT_GAME,"White","24",s_oStage);
-    _oButPlay2.setScale(2);
+        _oButPlay2 = new CTextButton(_pStartPosPlay2.x,_pStartPosPlay.y,oSprite1,"",FONT_GAME,"White","24",s_oStage);
+    //_oButPlay2.setScale(2);
         _oButPlay2.addEventListener(ON_MOUSE_UP, this._onButPlayRelease2, this);
 
         _oButPlay = new CTextButton(_pStartPosPlay.x,_pStartPosPlay.y,oSprite,TEXT_PLAY,FONT_GAME,"White","24",s_oStage);
@@ -92,7 +93,7 @@ function CMenu(){
     this.refreshButtonPos = function(iNewX,iNewY){
 
         _oButPlay.setPosition(_pStartPosPlay.x,_pStartPosPlay.y - iNewY);
-        _oButPlay2.setPosition(_pStartPosPlay.x,_pStartPosPlay.y - iNewY);
+        _oButPlay2.setPosition(_pStartPosPlay2.x,_pStartPosPlay2.y - iNewY);
         if(DISABLE_SOUND_MOBILE === false || s_bMobile === false){
                 _oAudioToggle.setPosition(_pStartPosAudio.x - iNewX,iNewY + _pStartPosAudio.y);
         }

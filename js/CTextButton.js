@@ -40,7 +40,7 @@ function CTextButton(iXPos,iYPos,oSprite,szText,szFont,szColor,iFontSize,oParent
         _oParentContainer.addChild(_oButton);
         
         _oText = new CTLText(_oButton, 
-                    10, 5, oSprite.width-20, oSprite.height-10, 
+                    10, 5, oSprite.width-20, oSprite.height, 
                     iFontSize, "center", szColor, szFont, 1,
                     0, 0,
                     szText,
