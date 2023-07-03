@@ -15,23 +15,23 @@ function CVictory(){
                 
 		_oMsgText = new CTLText(_oGroup, 
                     CANVAS_WIDTH/2-250, CANVAS_HEIGHT/2 - 110, 500, 38, 
-                    38, "center", "#fff", FONT_GAME, 1,
+                    38, "center", COLOR_FONT_2, FONT_GAME, 1,
                     0, 0,
                     TEXT_VICTORY,
                     true, true, false,
                     false );
 
-		_oMsgText.setShadow("#000000", 3, 3, 2);
+		//_oMsgText.setShadow("#000000", 3, 3, 2);
 
 		_oMsgTotalScore = new CTLText(_oGroup, 
                     CANVAS_WIDTH/2-250, (CANVAS_HEIGHT/2)-20, 500, 100, 
-                    48, "center", "#fff", FONT_GAME, 1,
+                    48, "center", COLOR_FONT_2, FONT_GAME, 1,
                     0, 0,
                     TEXT_TOTALSCORE,
                     true, true, true,
                     false );
                     
-		_oMsgTotalScore.setShadow("#000000", 2, 2, 2);
+		//_oMsgTotalScore.setShadow("#000000", 2, 2, 2);
 
 		
 		
@@ -40,7 +40,7 @@ function CVictory(){
                                             s_oSpriteLibrary.getSprite('but_menu_bg'),
                                             TEXT_PLAY_AGAIN,
                                             FONT_GAME,
-                                            "White",
+                                            COLOR_FONT_2,
                                             "24",
                                             _oGroup);
         _oContinueButton.addEventListener(ON_MOUSE_DOWN, this.unload, this);

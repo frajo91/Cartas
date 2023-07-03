@@ -26,7 +26,7 @@ var ON_MOUSE_OUT   = 3;
 var ON_DRAG_START  = 4;
 var ON_DRAG_END    = 5;
 
-var CARD_WIDTH = 160;
+var CARD_WIDTH = 142;
 var CARD_HEIGHT = 252;
 var MAX_CARDS = 50;
 var SCORE_MATCH_CARD;

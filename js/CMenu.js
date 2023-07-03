@@ -3,6 +3,8 @@ function CMenu(){
     var _pStartPosPlay;
     var _pStartPosCredits;
     var _pStartPosFullscreen;
+    var _pStartPosPlay2;
+    var _pStartPosfocus;
     
     var _oBg;
     var _oButPlay;
@@ -13,6 +15,8 @@ function CMenu(){
     var _oButFullscreen;
     var _fRequestFullScreen = null;
     var _fCancelFullScreen = null;
+
+    var _focus;
     
     this._init = function(){
 
@@ -24,12 +28,17 @@ function CMenu(){
     _pStartPosPlay2 = {x:((CANVAS_WIDTH/5)*4)-70,y:CANVAS_HEIGHT - 200};
         var oSprite = s_oSpriteLibrary.getSprite('but_menu_bg');
         var oSprite1 = s_oSpriteLibrary.getSprite('but_inicio');
+        var oSprite2=s_oSpriteLibrary.getSprite('focus');
 
-        _oButPlay2 = new CTextButton(_pStartPosPlay2.x,_pStartPosPlay.y,oSprite1,"",FONT_GAME,"White","24",s_oStage);
+    _pStartPosfocus= {x:_pStartPosPlay.x,y:_pStartPosPlay.y-200};
+    _focus=new CTextButton(_pStartPosfocus.x,_pStartPosfocus.y,oSprite2,"",FONT_GAME,COLOR_FONT_2,"24",s_oStage);
+    _focus.setVisible(false);
+
+        _oButPlay2 = new CTextButton(_pStartPosPlay2.x,_pStartPosPlay.y,oSprite1,"",FONT_GAME,COLOR_FONT_2,"24",s_oStage);
     //_oButPlay2.setScale(2);
         _oButPlay2.addEventListener(ON_MOUSE_UP, this._onButPlayRelease2, this);
 
-        _oButPlay = new CTextButton(_pStartPosPlay.x,_pStartPosPlay.y,oSprite,TEXT_PLAY,FONT_GAME,"White","24",s_oStage);
+        _oButPlay = new CTextButton(_pStartPosPlay.x,_pStartPosPlay.y,oSprite,TEXT_PLAY,FONT_GAME,COLOR_FONT_2,"24",s_oStage);
 	_oButPlay.setScale(2);
     _oButPlay.setVisible(false);
         _oButPlay.addEventListener(ON_MOUSE_UP, this._onButPlayRelease, this);
@@ -92,8 +101,9 @@ function CMenu(){
 	
     this.refreshButtonPos = function(iNewX,iNewY){
 
-        _oButPlay.setPosition(_pStartPosPlay.x,_pStartPosPlay.y - iNewY);
-        _oButPlay2.setPosition(_pStartPosPlay2.x,_pStartPosPlay2.y - iNewY);
+        _oButPlay.setPosition(_pStartPosPlay.x-iNewX,_pStartPosPlay.y - iNewY);
+        _oButPlay2.setPosition(_pStartPosPlay2.x-iNewX,_pStartPosPlay2.y - iNewY);
+        _focus.setPosition(_pStartPosfocus.x-iNewX,_pStartPosfocus.y- iNewY);
         if(DISABLE_SOUND_MOBILE === false || s_bMobile === false){
                 _oAudioToggle.setPosition(_pStartPosAudio.x - iNewX,iNewY + _pStartPosAudio.y);
         }
@@ -117,7 +127,7 @@ function CMenu(){
 
     this._onButPlayRelease2 = function(){
         _oButPlay2.setVisible(false); 
-        
+         _focus.setVisible(true)
         _oButPlay.setVisible(true)
     };
     
