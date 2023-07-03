@@ -166,13 +166,18 @@ function sizeHandler() {
             _checkOrientation(w,h);
         }
 		 
-	var multiplier = Math.min((h / CANVAS_HEIGHT), (w / CANVAS_WIDTH));
+	/*var multiplier = Math.min((h / CANVAS_HEIGHT), (w / CANVAS_WIDTH));
 
 	var destW = CANVAS_WIDTH * multiplier;
-	var destH = CANVAS_HEIGHT * multiplier;
+	var destH = CANVAS_HEIGHT * multiplier;*/
+
+        var multiplier = CANVAS_WIDTH/CANVAS_HEIGHT;
+
+    var destW = h * multiplier;
+    var destH = h;
         
         var iAdd = 0;
-        if (destH < h){
+        /*if (destH < h){
             iAdd = h-destH;
             destH += iAdd;
             destW += iAdd*(CANVAS_WIDTH/CANVAS_HEIGHT);
@@ -180,7 +185,7 @@ function sizeHandler() {
             iAdd = w-destW;
             destW += iAdd;
             destH += iAdd*(CANVAS_HEIGHT/CANVAS_WIDTH);
-        }
+        }*/
 
         var fOffsetY = ((h / 2) - (destH / 2));
         var fOffsetX = ((w / 2) - (destW / 2));
