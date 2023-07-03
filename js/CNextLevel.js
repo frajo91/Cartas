@@ -18,61 +18,61 @@ function CNextLevel(){
                 
 		_oMsgText =  new CTLText(_oGroup, 
                     CANVAS_WIDTH/2-250, CANVAS_HEIGHT/2 - 120, 500, 48, 
-                    48, "center", "#fff", FONT_GAME, 1,
+                    48, "center", COLOR_FONT_2, FONT_GAME, 1,
                     0, 0,
                     TEXT_LEVELCOMPLETED,
                     true, true, false,
                     false );
                     
-		_oMsgText.setShadow("#000000", 3, 3, 2);
+		//_oMsgText.setShadow(COLOR_SHADOWN_2, 3, 3, 2);
 
 		_oMatchTextScore =  new CTLText(_oGroup, 
                     CANVAS_WIDTH/2-250, CANVAS_HEIGHT/2 - 30, 500, 30, 
-                    30, "center", "#fff", FONT_GAME, 1,
+                    30, "center", COLOR_FONT_2, FONT_GAME_1, 1,
                     0, 0,
                     TEXT_MATCH_SCORE,
                     true, true, false,
                     false );
 
-		_oMatchTextScore.setShadow("#000000", 2, 2, 2);
+		//_oMatchTextScore.setShadow(COLOR_SHADOWN_2, 2, 2, 2);
 
 		_oMsgTimeScore = new CTLText(_oGroup, 
                     CANVAS_WIDTH/2-250, (CANVAS_HEIGHT/2 + 4), 500, 30, 
-                    30, "center", "#fff", FONT_GAME, 1,
+                    30, "center", COLOR_FONT_2, FONT_GAME_1, 1,
                     0, 0,
                     TEXT_TIMEBONUS,
                     true, true, false,
                     false );
                     
-		_oMsgTimeScore.setShadow("#000000", 2, 2, 2);
+		//_oMsgTimeScore.setShadow(COLOR_SHADOWN_2, 2, 2, 2);
 		
 		_oMsgLevelScore = new CTLText(_oGroup, 
                     CANVAS_WIDTH/2-250, (CANVAS_HEIGHT/2 + 40), 500, 34, 
-                    34, "center", "#fff", FONT_GAME, 1,
+                    34, "center", COLOR_FONT_2, FONT_GAME_1, 1,
                     0, 0,
                     TEXT_LEVEL_SCORE,
                     true, true, false,
                     false );
 
-		_oMsgLevelScore.setShadow("#000000", 2, 2, 2);
+		//_oMsgLevelScore.setShadow(COLOR_SHADOWN_2, 2, 2, 2);
 	
 		_oMsgTotalScore =  new CTLText(_oGroup, 
                     CANVAS_WIDTH/2-250, (CANVAS_HEIGHT/2 + 100), 500, 48, 
-                    48, "center", "#fff", FONT_GAME, 1,
+                    48, "center", COLOR_FONT_2, FONT_GAME, 1,
                     0, 0,
                     TEXT_TOTALSCORE,
                     true, true, false,
                     false );
                     
-		_oMsgTotalScore.setShadow("#000000", 2, 2, 2);
+		//_oMsgTotalScore.setShadow(COLOR_SHADOWN_2, 2, 2, 2);
 		
 		
 		
 		_oContinueButton =  new CTextButton(CANVAS_WIDTH/2,770,
                                         s_oSpriteLibrary.getSprite('but_menu_bg'),
-                                        "CONTINUE",
-                                        FONT_GAME,
-                                        "White",
+                                        TEXT_CONTINUE,
+                                        FONT_GAME_1,
+                                        COLOR_FONT_2,
                                         "24",
                                         _oGroup);
                 _oContinueButton.addEventListener(ON_MOUSE_UP, this.hide, this);	

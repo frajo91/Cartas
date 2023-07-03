@@ -18,31 +18,31 @@ function CGameOver(){
 
 		_oMsgTextBack = new CTLText(_oGroup, 
                     CANVAS_WIDTH/2-250, CANVAS_HEIGHT/2 - 100, 500, 50, 
-                    50, "center", "#fff", FONT_GAME, 1,
+                    50, "center", COLOR_FONT_2, FONT_GAME, 1,
                     0, 0,
                     TEXT_GAMEOVER,
                     true, true, false,
                     false );
-                _oMsgTextBack.setShadow("#000000",2,2,2);
+               // _oMsgTextBack.setShadow("#000000",2,2,2);
    
 	
 		_oMsgTextScore = new CTLText(_oGroup, 
                     CANVAS_WIDTH/2-250, (CANVAS_HEIGHT/2) + 30, 500, 50, 
-                    50, "center", "#fff", FONT_GAME, 1,
+                    50, "center", COLOR_FONT_2, FONT_GAME, 1,
                     0, 0,
                     TEXT_TOTALSCORE+ " 0",
                     true, true, false,
                     false );
                     
             
-		_oMsgTextScore.setShadow("#000000",2,2,2);
+		//_oMsgTextScore.setShadow("#000000",2,2,2);
 		
 		
 		_oContinueButton =  new CTextButton(CANVAS_WIDTH/2,670,
                                             s_oSpriteLibrary.getSprite('but_menu_bg'),
                                             TEXT_PLAY_AGAIN,
-                                            FONT_GAME,
-                                            "White",
+                                            FONT_GAME_1,
+                                            COLOR_FONT_2,
                                             "24",
                                             _oGroup);
 

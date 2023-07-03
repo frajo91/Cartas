@@ -6,6 +6,7 @@ function CMenu(){
     
     var _oBg;
     var _oButPlay;
+    var _oButPlay2;
     var _oButCredits;
     var _oAudioToggle;
     var _oFade;
@@ -14,14 +15,21 @@ function CMenu(){
     var _fCancelFullScreen = null;
     
     this._init = function(){
-        _oBg = createBitmap(s_oSpriteLibrary.getSprite('bg_menu'),200,200);
+
+        _oBg = createBitmap(s_oSpriteLibrary.getSprite('bg_menu'),getSize("Width"),getSize("Height"));
+
         s_oStage.addChild(_oBg);
 	
-	_pStartPosPlay = {x:(CANVAS_WIDTH/2),y:CANVAS_HEIGHT - 70};
+	_pStartPosPlay = {x:((CANVAS_WIDTH/5)*4),y:CANVAS_HEIGHT - 200};
         var oSprite = s_oSpriteLibrary.getSprite('but_menu_bg');
+
+        _oButPlay2 = new CTextButton(_pStartPosPlay.x-oSprite.width,_pStartPosPlay.y,oSprite,"play1",FONT_GAME,"White","24",s_oStage);
+    _oButPlay2.setScale(2);
+        _oButPlay2.addEventListener(ON_MOUSE_UP, this._onButPlayRelease2, this);
 
         _oButPlay = new CTextButton(_pStartPosPlay.x,_pStartPosPlay.y,oSprite,TEXT_PLAY,FONT_GAME,"White","24",s_oStage);
 	_oButPlay.setScale(2);
+    _oButPlay.setVisible(false);
         _oButPlay.addEventListener(ON_MOUSE_UP, this._onButPlayRelease, this);
         
         var oSpriteCredits = s_oSpriteLibrary.getSprite('but_credits');
@@ -83,6 +91,7 @@ function CMenu(){
     this.refreshButtonPos = function(iNewX,iNewY){
 
         _oButPlay.setPosition(_pStartPosPlay.x,_pStartPosPlay.y - iNewY);
+        _oButPlay2.setPosition(_pStartPosPlay.x,_pStartPosPlay.y - iNewY);
         if(DISABLE_SOUND_MOBILE === false || s_bMobile === false){
                 _oAudioToggle.setPosition(_pStartPosAudio.x - iNewX,iNewY + _pStartPosAudio.y);
         }
@@ -93,6 +102,8 @@ function CMenu(){
         
         _oButCredits.setPosition(_pStartPosCredits.x + iNewX,_pStartPosCredits.y + iNewY);        
     };
+
+    
     
     this._onButPlayRelease = function(){
         this.unload();
@@ -100,6 +111,12 @@ function CMenu(){
         $(s_oMain).trigger("start_session");
         s_oMain.gotoGame();
 	s_oMenu = null;
+    };
+
+    this._onButPlayRelease2 = function(){
+        _oButPlay2.setVisible(false); 
+        
+        _oButPlay.setVisible(true)
     };
     
     this._onButCreditsRelease = function(){

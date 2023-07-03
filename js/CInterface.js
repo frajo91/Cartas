@@ -17,7 +17,7 @@ function CInterface(szTimeLeft){
     var _fCancelFullScreen = null;
     
     this._init = function(szTimeLeft){
-	_pStartPosTimeText = {x:30,y:75};
+	_pStartPosTimeText = {x:(CANVAS_WIDTH/6)*2,y:75};
         _szTimeLeft = TEXT_TIMELEFT + szTimeLeft;
         _oTimeLeft = new CTLText(s_oStage, 
                     _pStartPosTimeText.x-250, _pStartPosTimeText.y, 500, 36, 
@@ -30,7 +30,7 @@ function CInterface(szTimeLeft){
         _oTimeLeft.setShadow(COLOR_SHADOWN_1, 2, 2, 2);
 
 
-	_pStartPosScoreText = {x:CANVAS_WIDTH/2,y:75};
+	_pStartPosScoreText = {x:(CANVAS_WIDTH/6)*4,y:75};
   
         _oScore = new CTLText(s_oStage, 
                     _pStartPosScoreText.x-250, _pStartPosScoreText.y, 500, 36, 

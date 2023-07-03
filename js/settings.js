@@ -6,10 +6,13 @@ var EDGEBOARD_Y = 220;
 
 var DISABLE_SOUND_MOBILE = false;
 var FONT_GAME = "RotisSansSerifPro-ExtraBold";
+var FONT_GAME_1 = "RotisSansSerifPro";
 
 var COLOR_FONT_1="#2C9881";
+var COLOR_FONT_2="#fff";
 
 var COLOR_SHADOWN_1="#fff";
+var COLOR_SHADOWN_2="#FFFFFFFF";
 
 var STATE_LOADING = 0;
 var STATE_MENU    = 1;
