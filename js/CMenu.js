@@ -22,8 +22,9 @@ function CMenu(){
 	
 	_pStartPosPlay = {x:((CANVAS_WIDTH/5)*4),y:CANVAS_HEIGHT - 200};
         var oSprite = s_oSpriteLibrary.getSprite('but_menu_bg');
+        var oSprite1 = s_oSpriteLibrary.getSprite('but_inicio');
 
-        _oButPlay2 = new CTextButton(_pStartPosPlay.x-oSprite.width,_pStartPosPlay.y,oSprite,"play1",FONT_GAME,"White","24",s_oStage);
+        _oButPlay2 = new CTextButton(_pStartPosPlay.x-oSprite1.width,_pStartPosPlay.y,oSprite1,"play1",FONT_GAME,"White","24",s_oStage);
     _oButPlay2.setScale(2);
         _oButPlay2.addEventListener(ON_MOUSE_UP, this._onButPlayRelease2, this);
 
