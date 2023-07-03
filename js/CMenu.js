@@ -14,7 +14,7 @@ function CMenu(){
     var _fCancelFullScreen = null;
     
     this._init = function(){
-        _oBg = createBitmap(s_oSpriteLibrary.getSprite('bg_menu'));
+        _oBg = createBitmap(s_oSpriteLibrary.getSprite('bg_menu'),200,200);
         s_oStage.addChild(_oBg);
 	
 	_pStartPosPlay = {x:(CANVAS_WIDTH/2),y:CANVAS_HEIGHT - 70};
@@ -81,6 +81,7 @@ function CMenu(){
     };
 	
     this.refreshButtonPos = function(iNewX,iNewY){
+
         _oButPlay.setPosition(_pStartPosPlay.x,_pStartPosPlay.y - iNewY);
         if(DISABLE_SOUND_MOBILE === false || s_bMobile === false){
                 _oAudioToggle.setPosition(_pStartPosAudio.x - iNewX,iNewY + _pStartPosAudio.y);
